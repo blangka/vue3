@@ -55,6 +55,7 @@ Lint on save
 public/index.html 에서 vue 를 로드하고, main.js 에서 vue 를 실행한다.
 <div id="app"></div> 에서 vue 를 실행한다.
 
+
 ## Project setup
 ```
 npm install

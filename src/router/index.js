@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-import DataBidingStringView from "@/views/databinding/DataBidingStringView";
 import HomeView from "@/views/HomeView.vue";
+
 
 const routes = [
   {
@@ -19,7 +19,12 @@ const routes = [
   {
     path: "/databinding/string",
     name: "DataBindingStringVue",
-    component: DataBidingStringView,
+    component: () => import(/* webpackChunkName: "databinding",webpackPrefetch: true */ "../views/databinding/DataBindingStringView.vue"),
+  },
+  {
+    path: "/databinding/html",
+    name: "DataBindingHtmlVue",
+    component: () => import(/* webpackChunkName: "databinding",webpackPrefetch: true */ "../views/databinding/DataBindingHtmlView.vue"),
   },
 ];
 
